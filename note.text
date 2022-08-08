@@ -1,0 +1,18 @@
+Pre-Test 
+1. Microservices adalah suatu framework Architecture yang dipakai sebagai model dalam pembuatan aplikasi cloud yang modern,
+   Di dalam microservices setiap aplikasi di bangun sebagai sekumpulan service dan setiap layanan berjalan dalam processnya sendiri.
+
+2. Kelebihan Microservices :
+   * Scable : aplikasi arsitektur layanan mikro umumnya mudah untuk di upgrade dan diatur sesuai dengan kebutuhan pengguna
+   * Aman   : microservices juga umumnya sangat aman dan secure karena telah dirancang untuk mampu mengatasi semua kegagalan yang mungkin terjadi
+   * Lebih Keras : arsitektur layanan mikro memberi developer kebebasan untuk mengembangkan dan menyebarkan layanan secara mandiri
+   * Mudah dimengerti : microservices mudah dipahami dan dimodifikasi sehingga membantu anggota tim baru menjadi produktif dengan cepat
+   * Sederhana : ketika perubahan diperlukan di pada bagian tertentu, hanya layanan terkait yang perlu dimodifikasi — tidak perlu menerapkannya ke seluruh aplikasi
+   * Error Terisolasi : jika satu layanan mikro gagal, yang lain akan terus bekerja (walaupun satu area bermasalah dari aplikasi monolit dapat membahayakan seluruh sistem)
+
+   Kekurangan Microservices :
+   * Test yang rumit : karena deployment microservices umumnya tersebar, testing bisa menjadi sedikit rumit dan membutuhkan banyak langkah
+   * Sistem yang sedikit rumit :arsitektur microservices membawa sedikit kompleksitas karena developer harus mengurangi toleransi error, latensi jaringan, dan lain-lain
+   * Perlu banyak automation : microservices juga membutuhkan sistem automation yang cukup tinggi untuk bisa melakukan deployment
+
+3. 
