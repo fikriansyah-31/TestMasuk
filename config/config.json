@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "talent_insider",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
