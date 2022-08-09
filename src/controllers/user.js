@@ -113,9 +113,11 @@ exports.deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
 
-    await user.destroy({
-      where: { id },
-    });
+    if(role == admin){
+        await user.destroy({
+          where: { id },
+        });
+    }
 
     res.status(200).send({
       status: "Success",

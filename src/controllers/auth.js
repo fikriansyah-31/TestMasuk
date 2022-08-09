@@ -1,6 +1,6 @@
 // Import models 
 
-const { user } = require("../../models")
+const { user, news, post } = require("../../models")
 
 // Import Package
 const Joi = require("joi")
@@ -175,7 +175,7 @@ exports.checkAuth = async (req, res) => {
                 },
             },
         })
-        
+
     } catch (error) {
         console.log(error)
         res.status(404).send({
@@ -184,3 +184,66 @@ exports.checkAuth = async (req, res) => {
         })
     }
 }
+
+exports.deleteuser = async (req, res) => {
+    try {
+      const { id } = req.params;
+  
+     
+          await user.destroy({
+            where: { id },
+          });
+      
+  
+      res.status(200).send({
+        status: "Success",
+        message: `Delete User id: ${id} Success `,
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(404).send({
+        status: "Delete Failed",
+        message: "Server Error",
+      });
+    }
+  };
+
+  exports.getUserss = async (req, res) => {
+    try {
+      const users = await user.findAll({
+        attributes: {
+          exclude: ["password", "createdAt", "updatedAt"],
+        },
+        include: [
+          {
+            model: news,
+            as: "news",
+            attributes: {
+              exclude: ["idUser", "createdAt", "updatedAt"],
+            },
+          },
+          {
+            model: post,
+            as: "post",
+            attributes: {
+              exclude: ["createdAt", "updatedAt"],
+            },
+          },
+        ],
+      });
+  
+      res.status(200).send({
+        status: "Success",
+        message: "Get Users Success",
+        data: {
+          users,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+      res.status(404).send({
+        status: "Failed",
+        message: "Server Error",
+      });
+    }
+  };
