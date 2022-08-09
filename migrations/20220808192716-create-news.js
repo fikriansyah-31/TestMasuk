@@ -27,13 +27,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       salary: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "users",
-          key: "id"
-        },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE"
+        type: Sequelize.INTEGER
       },
       startDate: {
         type: Sequelize.DATE

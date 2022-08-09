@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       news.belongsTo(models.user, {
         as: "user",
         foreignKey: {
-          name: "idUser"
+          name: "id"
         }
       })
     }

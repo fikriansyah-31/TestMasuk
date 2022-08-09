@@ -20,7 +20,7 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/api/v1/", router)
-// app.use("/uploads", express.static("uploads"))
+app.use("/uploads", express.static("uploads"))
 
 //Server Listen
 server.listen(port, () => console.log(`Listening on port ${port}`))
