@@ -40,13 +40,6 @@ exports.getUsers = async (req, res) => {
             exclude: ["createdAt", "updatedAt"],
           },
         },
-        {
-          model: transaction,
-          as: "buyerTransactions",
-          attributes: {
-            exclude: ["createdAt", "updatedAt"],
-          },
-        },
       ],
     });
 
