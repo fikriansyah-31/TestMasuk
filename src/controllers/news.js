@@ -20,16 +20,10 @@ exports.getNews = async (req, res) => {
         })
                 data = JSON.parse(JSON.stringify(data))
 
-                    // Map
-            data = data.map((item) => {
-            return {
-          ...item,
-          image: process.env.FILE_PATH + item.image,
-        };
-      });
+           
       res.status(200).send({
         status: "Success",
-        message: "Get data all product success",
+        message: "Get data all news success",
         data,
       });
   
